@@ -37,7 +37,7 @@ To mitigate this vulnerability, Pimcore developers applied output encoding using
 ```diff
 - $name = $this->getName();
 + $name = htmlspecialchars($this->getName(), ENT_QUOTES, 'UTF-8');
-
+```
 ---
 
 # 🧠 Secure Coding Principles
